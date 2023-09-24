@@ -1,5 +1,5 @@
 # Torche olympique 2024 à réaliser en découpe laser
-# Fête de la science 2023 / Lou Fabiloub / Christophe Garde
+# Fête de la science 2023 / Lou Fabiloub
 
 ## Introduction
 Il s'agit ici de préparer une torche olympique en découpe laser dans laquelle on viendra insérer un montage électronique simulant la flamme.
@@ -29,7 +29,7 @@ pour un gif
 
 ### Etape 4 : Projection en 2D et Planification de la découpe
 Assemblage des différents éléments dans inkscape pour faire tenir sur des plaques 500x300mm
-
+![alt text](https://github.com/chgarde/olympic_torch_lasercut/blob/main/step3/out/out.gif?raw=true)
 
 
 
