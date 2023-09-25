@@ -104,6 +104,9 @@ module logo_plaque(){
 
 }
 
+module logo_plaque2D(){
+    square(50,54);
+}
 
 module torche(ep){
     bagues_cutter(ep){
@@ -152,6 +155,7 @@ module bagues2D(){
 module plan2D(){
     torche2D();       
     bagues2D();
+    translate([-100,-100,0])logo_plaque2D();
 }
 
 module plan3D(){
