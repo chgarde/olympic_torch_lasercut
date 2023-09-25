@@ -1,5 +1,5 @@
 a=0; // decalage d'angle.
-ep=3; // epaisseur du bois
+ep=3.3; // epaisseur du bois
 nb=12; // nb de pales
 h=480; // hauteur totale
 kerf=0.1; // kerf du laser
@@ -33,7 +33,11 @@ module pales_cutter(ep){
 }
 
 module bague(r,ep){
-   rotate([-90,0,0]) cylinder(h=ep,r=r,center=true);
+    
+        rotate([-90,0,0]) difference(){
+            cylinder(h=ep,r=r,center=true);
+            cylinder(h=ep+4,r=3,center=true);
+        }
 }
 
 module mirrorer(v){
@@ -130,7 +134,7 @@ module flatteninter(){
 module torche2D(){     
     for (i=[0:nb/2-1]){
         //for (i=[0:1]){
-         projection(true) translate([(i+1)*120,0,0]) flatteninter() rotate([0,i*(360/nb)-a,0]) torche2();
+         projection(true) translate([(i+1)*100,0,0]) flatteninter() rotate([0,i*(360/nb)-a,0]) torche2();
         }
 }
 
@@ -159,10 +163,13 @@ module plan3D(){
 
 
 // vue 3D
-plan3D();
+//difference(){
+//plan3D();
 
 // vue 2D bagues + pales
-//plan2D();
+plan2D();
 
 // video
 //rotate([0,$t*360,0]) plan3D();
+//translate([0,200,0]) cube([100,400,100],center=true);
+//}
